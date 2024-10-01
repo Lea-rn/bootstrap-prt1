@@ -1,0 +1,19 @@
+.child1 {
+    width: 30%;
+    background-color: green;
+    height: 200px;
+}
+
+.child2 {
+    width: 30%;
+    background-color: orangered;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+}
+
+.abc {
+    margin-left: 300px;
+}
