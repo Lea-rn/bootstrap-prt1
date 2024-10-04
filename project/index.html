@@ -175,24 +175,29 @@
 
   <!-- sidebar :  -->
 
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+  <div 
+    id="sidebarid"
+  class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark position-relative side" >
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <i class="bi bi-lightning-charge fs-2 me-4"></i>
-      <span class="fs-4">Your Brand</span>
-    </a>
+      <span class="fs-4 deletetext  ">Your Brand</span>
+ </a>
+    <span onclick=makeitsmall()  style="right:-40px ; top:36px" class="position-absolute  translate-middle badge rounded-pill fs-3  ">
+      <i class="bi bi-x-circle"></i>
+    </span>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="#" class="nav-link " aria-current="page">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-          Home
+          <span class="deletetext">Home</span>
         </a>
       </li>
  
       <li>
         <a href="./user/add.html" class="nav-link text-white">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-         Add Customers
+       <span class="deletetext">  Add Customers</span>
         </a>
       </li>
     </ul>
@@ -200,7 +205,7 @@
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="./images/image1.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>Your Name</strong>
+        <strong class="deletetext">Your Name</strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
         <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -228,6 +233,8 @@
           </form>
         </div>
       </nav>
+
+   
       <!-- table :  -->
       <table style="width: 98%;" class="table table-bordered table-striped mt-5 mx-auto text-center">
         <thead>
@@ -277,5 +284,19 @@
 </main>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
-    <script src="./js/sidebars.js"></script></body>
+    <script src="./js/sidebars.js"></script>
+     
+     
+     
+     
+     <script>
+
+
+function makeitsmall(){
+  sidebarid.classList.toggle("smallsidebar")
+}
+     </script>
+  
+  
+  </body>
 </html>
